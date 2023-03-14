@@ -31,7 +31,7 @@ def bfs(x,y,building_group):
                     v[cx][cy]=c
                     q.append((cx,cy))
                     c+=1
-    building_group.append(c)
+    building_group.append(c)   #bfs가 다끝나면 블럭 개수 업데이트
 
 
 result = 0
@@ -40,7 +40,7 @@ for x in range(n):
     for y in range(n):
         if g[x][y]==1 and v[x][y]==0:
             bfs(x,y,building_group)
-            result+=1
+            result+=1    # 단지 개수
 
 
 # print_g(v)

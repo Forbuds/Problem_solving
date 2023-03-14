@@ -106,16 +106,16 @@ def bfs(x,y):
         for i in range(4):
             cx,cy = nx+dx[i],ny+dy[i]
             if 0<=cx<n and 0<=cy<n:
-                if v[cx][cy]==0 and g[cx][cy]>k:
+                if v[cx][cy]==0 and g[cx][cy]>k:   #마찬가지로 k 보다 높다면
                     v[cx][cy] = 1
                     q.append((cx,cy))
-b_arr = []
-for k in range(0,mv+1):
+b_arr = []   #섬 개수 담는 리스트
+for k in range(0,mv+1):     # 물의 높이가 어느 정도일 지 모른다.
     v = [[0]*n for _ in range(n)]
     a = 0
     for x in range(n):
         for y in range(n):
-            if v[x][y]==0 and g[x][y]>k:
+            if v[x][y]==0 and g[x][y]>k:   #k보다 높다면 BFS
                 bfs(x,y)
                 a+=1
     b_arr.append(a)
