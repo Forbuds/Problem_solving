@@ -2,6 +2,7 @@
 # 이렇게 해서 예제 1 5, 예제 2 6으로 맞았지만 제출하면 틀렸다. 마지막 아무 지역도 물에 잠기지 않을 수도 있다. 를 고려하지 않아서 일수도?
 # 일단 나랑 비슷하게 푼 링크 : https://lakelouise.tistory.com/78
 # https://hidemasa.tistory.com/143
+'''
 import sys
 from collections import deque
 import copy
@@ -77,6 +78,7 @@ while(1):
     k+=1
 
 '''
+
 import sys
 from collections import deque
 import copy
@@ -138,4 +140,3 @@ print(max(b_arr))
 # 1
 
 
-'''
