@@ -21,24 +21,28 @@ n = int(n)
 dx = [1,-1,0,0,1,-1,1,-1]
 dy = [0,0,-1,1,1,1,-1,-1]
 
-# 첫 번째 제출
-tsx,tsy=sx,sy
+# 두 번째 제출
 for _ in range(n):
     p = str(input().strip())
     i = m.index(p)
     tx = kx+dx[i]
     ty = ky+dy[i]
-    if tx==sx and ty==sy:
-        tsx = sx+dx[i]
-        tsy = sy+dy[i]
+
+    if 0<=tx<8 and 0<=ty<8:
+        if tx==sx and ty==sy:
+            if 0<=sx+dx[i]<8 and 0<=sy + dy[i]<8:
+                sx = sx + dx[i]
+                sy = sy + dy[i]
+                kx, ky = tx, ty
+            else:
+                continue
+        else:
+            kx,ky = tx,ty
     else:
-        tsx, tsy = sx, sy
-    if 0<=tx<8 and 0<=ty<8 and 0<=tsx<8 and 0<=tsy<8:
-        kx, ky = tx, ty
-        sy, sx = tsy, tsx
-    # print('s')
-    # print(x[kx], str(y[ky]), x[sx], y[sy])
-    # print(x[tx],str(y[ty]),x[tsx],y[tsy])
+        continue
+
+print(x[kx]+str(y[ky]))
+print(x[sx]+str(y[sy]))
 
 
 
