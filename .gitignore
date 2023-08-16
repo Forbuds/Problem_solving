@@ -3,3 +3,8 @@
 /workspace.xml
 *.idea/
 /.idea/
+/tmp/*
+./tmp
+./TMP
+TMP/*
+Algorithm.py
